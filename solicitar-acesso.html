@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Solicitar Acesso - Gerenciamento de Recursos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body style="background-color: red;">
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="row w-100">
+            <!-- Aqui você pode adicionar o formulário de login -->
+          <div class="col-md-6  rounded p-4 text-white">
+            <h1 class=" tx-principal ">Solicitar Acesso</h1>
+            <span>Se você é professor ou funcionário do Senai, solicite acesso à gestão de armários aqui.</span><br>
+            <a class="btn btn-branco mt-5">Solicitar</a>
+
+          </div>
+          <div class="col-md-6 bg-white rounded p-4">
+            <form>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Nome Completo</label>
+                <input type="email" placeholder="Getulio Vargas" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">Utilize apenas o email profissional do senai.</div>
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">CPF</label>
+                <input type="email" placeholder="Ex: 440.512.398.23" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Confirme a senha</label>
+                <input type="password" class="form-control" id="exampleInputPassword1">
+              </div>
+              <div class="mt-5">
+              <span>Já possui uma conta? <a href="#" class="text-danger">Clique Aqui</a></span>
+            </div>
+            </form>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>
