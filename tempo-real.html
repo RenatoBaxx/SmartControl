@@ -28,33 +28,72 @@
       </div>
     </nav>
     <div class="container" style="margin-top: 200px;">
-      <div class="row">
-        <div class="col">
-          <div class="topicos text-white p-2">
-            <span>Dísponiveis</span>
-            <h3>Equipamentos/Ferramentas</h3>
+      <div class="row text-center">
+        <div class="col-md-4">
+          <div class="topicos rounded d-flex align-items-center justify-content-start text-white p-2">
+            <t class="me-3">1</t>
+            <div class="text-start">
+              <span class="d-block">Recursos</span>
+              <h3 class="m-0">Disponíveis</h3>
+            </div>
           </div>
         </div>
-        <div class="col">
-          Column
+        <div class="col-md-4">
+          <div class="topicos rounded  d-flex align-items-center justify-content-start text-white p-2">
+            <t class="me-3">1</t>
+            <div class="text-start">
+              <span class="d-block">Recursos</span>
+              <h3 class="m-0">Retirados</h3>
+            </div>
+          </div>
         </div>
-        <div class="col">
-          Column
+        <div class="col-md-4">
+          <div class="topicos rounded  d-flex align-items-center justify-content-start text-white p-2">
+            <t class="me-3">20</t>
+            <div class="text-start">
+              <span class="d-block">Recursos</span>
+              <h3 class="m-0">Manutençao</h3>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+    
 
-    <div class="container mt-5 d-flex justify-content-center">
-      <div class="opcaoarmario d-flex align-items-center" style="visibility: hidden;">
-        <select class="form-select me-2" style="width: auto;">
-          <option selected>Escolha um armário</option>
-          <option value="1">Armário 1</option>
-          <option value="2">Armário 2</option>
-          <option value="3">Armário 3</option>
-        </select>
-        <button class="btn btn-red">Selecionar</button>
+    <div class="container mt-5">
+      <div class="row mb-3">
+        <div class="col-md-3">
+          <select id="filterName" class="form-select">
+            <option value="">Filtrar por Nome</option>
+            <option value="Renato">Renato</option>
+            <option value="Outro">Outro</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="filterTool" class="form-select">
+            <option value="">Filtrar por Ferramenta</option>
+            <option value="Paquimetro">Paquímetro</option>
+            <option value="Outra">Outra</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="filterCabinet" class="form-select">
+            <option value="">Filtrar por Armário</option>
+            <option value="Armário 1">Armário 1</option>
+            <option value="Armário 2">Armário 2</option>
+            <option value="Armário 3">Armário 3</option>
+          </select>
+        </div>
+        <div class="col-md-3">
+          <select id="filterStatus" class="form-select">
+            <option value="">Filtrar por Status</option>
+            <option value="Ativo">Ativo</option>
+            <option value="Inativo">Inativo</option>
+          </select>
+        </div>
       </div>
     </div>
+    
     
     <div class="container">
       <div class="infotop p-3 rounded" style="visibility: visible;">

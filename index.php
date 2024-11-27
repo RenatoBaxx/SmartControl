@@ -8,17 +8,18 @@ if (!isset($_SESSION['user'])) {
   exit();
 }
 
-// Inclua a conexão com o banco de dados para obter o nome do usuário
+// Inclua a conexão com o banco de dados para obter os dados do usuário
 include 'db.php';
 
 $email = $_SESSION['email'];
-$stmt = $conn->prepare("SELECT apelido FROM professor WHERE email = ?");
+$stmt = $conn->prepare("SELECT apelido, admin FROM professor WHERE email = ?");
 $stmt->bind_param("s", $email);
 $stmt->execute();
-$stmt->bind_result($nome);
+$stmt->bind_result($nome, $isAdmin);
 $stmt->fetch();
 $stmt->close();
 $conn->close();
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -41,9 +42,19 @@ $conn->close();
                 <li class="nav-item">
                     <a class="nav-link text-white" aria-current="page" href="#">Home</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="#">Link</a>
-                </li>
+                <?php if ($isAdmin == 1): ?>
+                  <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Admin
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Novo Professor</a></li>
+            <li><a class="dropdown-item" href="#">Armarios</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Equipamentos</a></li>
+          </ul>
+        </li>
+                <?php endif; ?>
             </ul>
             <a href="logout.php" class="mt-auto mb-auto text-white fs-4"><i class="fi fi-br-exit"></i></a>
         </div>
@@ -54,7 +65,7 @@ $conn->close();
     <div class="infotop p-3 rounded">
         <div class="m-2" style="padding-left: 50px;">
             <h1>Bem Vindo,</h1>
-            <span class="tx-principal" style=" font-size: 60px;"><?php echo htmlspecialchars($nome); ?></span>
+            <span class="tx-principal" style=" font-size: 60px;"><?php echo htmlspecialchars($nome); ?>👋</span>
         </div>
     </div>
 
